@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/components": "^10.10.0",
+    "@vueuse/core": "^10.10.0",
     "vue": "^3.4.21",
+    "vue-demi": "^0.14.8",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
