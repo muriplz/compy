@@ -1,7 +1,7 @@
 <template>
   <div class="video-container">
     <h2 class="title" v-show="showTitle">{{ title }}</h2>
-    <video ref="videoPlayer" :src="src" @ended="restartVideo" @play="showTitleTemporarily" controls>
+    <video ref="videoPlayer" :src="src" @ended="restartVideo" @play="onPlay" controls>
       Your browser does not support the video tag.
     </video>
   </div>
@@ -31,13 +31,18 @@ export default {
     },
     restartVideo() {
       this.$refs.videoPlayer.currentTime = 0;
-      this.playVideo();
     },
     showTitleTemporarily() {
       this.showTitle = true;
       setTimeout(() => {
         this.showTitle = false;
       }, 2000);
+    },
+    onPlay() {
+      this.showTitle = true;
+      setTimeout(() => {
+        this.showTitle = false;
+      }, 1500);
     }
   }
 }
@@ -59,7 +64,7 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
-  transition: opacity 0.5s ease;
+  transition: opacity 1.5s ease;
 }
 
 video {
