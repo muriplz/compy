@@ -2,6 +2,7 @@
 import {ref} from "vue";
 import Header from "@/components/Header.vue";
 import VideoEntry from "@/components/VideoEntry.vue";
+import Footer from "@/components/Footer.vue";
 
 // Initialize video entries
 const videoEntries = ref([
@@ -37,18 +38,14 @@ const videoEntries = ref([
       :src="entry.src"
       :description="entry.description"
   />
+
+  <Footer/>
 </template>
 
 <style scoped>
-
-.payday-video {
-  margin: 20px auto;
-  max-width: 500px;
-}
-
 p {
   font-size: 11px;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 20px 10px 20px;
 }
 </style>
