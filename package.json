@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@carbon/icons": "^11.42.0",
+    "@carbon/icons-vue": "^10.83.1",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vueuse/components": "^10.10.0",
     "@vueuse/core": "^10.10.0",

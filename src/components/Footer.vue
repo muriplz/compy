@@ -5,16 +5,16 @@
 <template>
   <div class="footer">
     <p>
-      Made by MuriPlz
+      Made by <a href="http://github.com/MuriPlz">MuriPlz</a> with ❤️
     </p>
   </div>
 </template>
 
 <style scoped>
-.footer {
+.footer {;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8px;
+  font-size: 12px;
 }
 </style>

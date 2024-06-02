@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    <video ref="videoPlayer" :src="src" @ended="restartVideo" controls controlsList="nodownload">
+    <video v-if="isVisible" ref="videoPlayer" :src="src" @ended="restartVideo" controls controlsList="nodownload">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -11,19 +11,24 @@ export default {
   props: ['src'],
   data() {
     return {
-      volume: 0.5,
+      isVisible: false,
     }
   },
+  mounted() {
+    const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            this.isVisible = true;
+            observer.disconnect();
+          }
+        },
+        {
+          rootMargin: "100px"
+        }
+    );
+    observer.observe(this.$el);
+  },
   methods: {
-    playVideo() {
-      this.$refs.videoPlayer.play();
-    },
-    pauseVideo() {
-      this.$refs.videoPlayer.pause();
-    },
-    changeVolume() {
-      this.$refs.videoPlayer.volume = this.volume;
-    },
     restartVideo() {
       this.$refs.videoPlayer.currentTime = 0;
     }

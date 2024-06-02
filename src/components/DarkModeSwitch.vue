@@ -16,13 +16,11 @@ watchEffect(() => mode.value = state.value as any)
 
 <template>
   <button class="tgl-btn" @click="next()">
-    <i v-if="state === 'dark'" i-carbon-moon class="align-middle"/>
-    <i v-if="state === 'light'" i-carbon-sun class="align-middle"/>
-    <i v-if="state === 'cafe'" i-carbon-cafe class="align-middle"/>
-    <i v-if="state === 'contrast'" i-carbon-contrast class="align-middle"/>
-    <i v-if="state === 'auto'" i-carbon-laptop class="align-middle"/>
-
-    <span class="ml-2 capitalize">{{ state }}</span>
+    <Moon v-if="state === 'dark'" i-carbon-moon class="align-middle"/>
+    <Sun v-if="state === 'light'" i-carbon-sun class="align-middle"/>
+    <Cafe v-if="state === 'cafe'" i-carbon-cafe class="align-middle"/>
+    <Contrast v-if="state === 'contrast'" i-carbon-contrast class="align-middle"/>
+    <Laptop v-if="state === 'auto'" i-carbon-laptop class="align-middle"/>
   </button>
 </template>
 
@@ -40,8 +38,8 @@ watchEffect(() => mode.value = state.value as any)
   font-size: 1rem;
   box-sizing: border-box;
   vertical-align: middle;
-  width: 70px; /* Set a fixed width */
-  height: 30px; /* Set a fixed height */
+  width: 47px;
+  height: 47px;
   margin-left: 20px;
   margin-right: 20px;
 }

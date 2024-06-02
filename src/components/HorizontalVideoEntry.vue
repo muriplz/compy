@@ -16,26 +16,35 @@ const props = defineProps({
     <VideoPlayer class="video-player" :src="props.src" />
     <p class="description">{{ props.description }}</p>
   </div>
-  <hr>
 </template>
 
 <style scoped>
+@import url(https://fonts.bunny.net/css?family=alumni-sans-inline-one:400);
+
 .video-entry {
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto auto;
 }
-
 .title {
-  font-size: 24px;
-  text-align: center;
-}
-
-.video-player {
-  margin: 0 auto;
-  max-width: 500px;
+  font-family: 'Alumni Sans Inline One', display, serif;
+  font-size: 38px;
 }
 
 .description {
-  font-size: 14px;
-  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
 }
+
+.title, .description {
+  align-self: flex-start;
+}
+
+.video-player {
+  max-width: 800px;
+  width: 100%;
+  align-self: center;
+}
+
 </style>
+
