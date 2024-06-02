@@ -1,6 +1,6 @@
 <template>
   <div class="video-container">
-    <video ref="videoPlayer" :src="src" @ended="restartVideo" controls>
+    <video ref="videoPlayer" :src="src" @ended="restartVideo" controls controlsList="nodownload">
       Your browser does not support the video tag.
     </video>
   </div>

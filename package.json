@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue/cli-plugin-typescript": "^5.0.8",
     "@vueuse/components": "^10.10.0",
     "@vueuse/core": "^10.10.0",
     "vue": "^3.4.21",
@@ -17,7 +18,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/cli-plugin-typescript": "~5.0.0",
     "vite": "^5.2.8"
   }
 }
