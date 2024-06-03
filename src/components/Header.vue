@@ -35,7 +35,6 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 .title {
   font-size: 7vw;
   text-align: center;
-  user-select: none;
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;
