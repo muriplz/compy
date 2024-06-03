@@ -27,7 +27,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 }
 
 .spacer1 {
-  flex-grow: 0.75;
+  flex-grow: 0.10;
 }
 
 .spacer2 {
