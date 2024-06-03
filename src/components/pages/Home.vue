@@ -143,4 +143,10 @@ const verticalVideoEntries = ref([
   align-items: center;
   width: 100%;
 }
+
+@media(max-width: 800px) {
+  .about-me {
+    font-size: 16px;
+  }
+}
 </style>

@@ -58,5 +58,15 @@ const props = defineProps({
   align-self: center;
 }
 
+@media(max-width: 800px) {
+  .description {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
 </style>
 

@@ -82,8 +82,15 @@ const props = defineProps({
   }
 
   .text-content {
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .description {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 28px;
   }
 }
 </style>
