@@ -30,7 +30,7 @@ const props = defineProps({
 </template>
 
 <style scoped>
-@import url(https://fonts.bunny.net/css?family=alumni-sans-inline-one:400);
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
 
 .video-entry {
   width: 100%;
@@ -38,7 +38,7 @@ const props = defineProps({
   margin: 0 auto auto;
 }
 .title {
-  font-family: 'Alumni Sans Inline One', display, serif;
+  font-family: 'Abril Fatface', display, serif;
   font-size: 38px;
 }
 

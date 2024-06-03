@@ -36,7 +36,7 @@ p {
 
 .content {
   background-color: var(--color-background-mute);
-  border-top: 1px solid var(--color-text);
+  border: 1px solid var(--color-text);
   border-radius: 10px;
 }
 </style>

@@ -2,7 +2,7 @@
 
 #app {
   max-width: 1580px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   font-weight: normal;
   font-family: 'Lato', sans-serif;
   font-color: var(--color-text);

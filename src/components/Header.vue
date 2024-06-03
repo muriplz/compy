@@ -16,8 +16,6 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 
 
 <style scoped>
-@import url(https://fonts.bunny.net/css?family=allerta-stencil:400);
-
 .header {
   display: flex;
   align-items: center;
@@ -38,7 +36,6 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
   font-size: 7vw;
   text-align: center;
   user-select: none;
-  font-family: 'Allerta Stencil', sans-serif;
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;

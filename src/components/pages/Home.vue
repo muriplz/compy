@@ -37,7 +37,7 @@ const horizontalVideoEntries = ref([
   {
     title: 'Low Budget Short Movie Footage Compilation',
     src: Trailer1,
-    description: 'These are some of shots/scenes mashed up into a ⅔ min “trailer”. All of which were directed and edited by me while I was studying abroad in Budapest Metropolitan University. It was initially challenging to make visually appealing imagery and content due to covid-19 restrictions, meaning smaller teams and equipment shortage. But I got quite a lot out of the experience regardless. We really had to get creative to make some solid stories in some hard times, and I am positive we got to make the best out of what we had, leading to some real fun working environments, and a great team working towards same vision, motivated and optimistic about it. The last scene being my personal favorite.',
+    description: 'These are some of shots/scenes mashed up into a ⅔ min “trailer”. All of which were directed and edited by me while I was studying abroad in Budapest Metropolitan University. It was initially challenging to make visually appealing imagery and content due to covid-19 restrictions, meaning smaller teams and equipment shortage. But I got quite a lot out of the experience regardless. We really had to get creative to make some solid stories in some hard times, and I am positive we got to make the best out of what we had. This led to some real fun working environments, and a great team working towards same vision, motivated and optimistic about it. The last scene being my personal favorite.',
     containsSlurs: true,
     id: 1,
   },
@@ -137,7 +137,6 @@ const verticalVideoEntries = ref([
   </div>
 
   <ContactMe/>
-  <Footer/>
 </template>
 
 <style scoped>
@@ -145,7 +144,7 @@ const verticalVideoEntries = ref([
   padding: 8px;
   background-color: var(--color-background-mute);
   border-radius: 10px;
-  border-top: 1px solid var(--color-text);
+  border: 1px solid var(--color-text);
   font-size: 22px;
   text-align: center;
   margin: 0 20px 20px 20px;
