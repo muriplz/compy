@@ -1,6 +1,6 @@
 <template>
-  <div class="video-container">
-    <video v-if="isVisible" ref="videoPlayer" :src="src" @ended="restartVideo" controls controlsList="nodownload">
+  <div class="video-container" @click="playVideo">
+    <video v-if="isVisible" ref="videoPlayer" :src="src" @ended="restartVideo" @play="videoPlaying = true" @pause="videoPlaying = false" controls controlsList="nodownload">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -8,10 +8,11 @@
 
 <script>
 export default {
-  props: ['src'],
+  props: ['src', 'thumbnail'],
   data() {
     return {
       isVisible: false,
+      videoPlaying: false,
     }
   },
   mounted() {

@@ -13,9 +13,11 @@ const props = defineProps({
 
 <template>
   <div class="video-entry">
-    <h2 class="title">{{ props.title }}</h2>
     <VideoPlayer class="video-player" :src="props.src" />
-    <p class="description">{{ props.description }}</p>
+    <div class="text-content">
+      <h2 class="title">{{ props.title }}</h2>
+      <p class="description">{{ props.description }}</p>
+    </div>
   </div>
   <Separator/>
 </template>
@@ -24,10 +26,19 @@ const props = defineProps({
 @import url(https://fonts.bunny.net/css?family=alumni-sans-inline-one:400);
 
 .video-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto auto;
+  margin: 20px auto auto;
 }
+
+.text-content {
+  margin-left: 20px;
+}
+
 .title {
   font-family: 'Alumni Sans Inline One', display, serif;
   font-size: 38px;
@@ -37,7 +48,6 @@ const props = defineProps({
   font-size: 22px;
   margin: 10px 0 20px;
   text-align: justify;
-
 }
 
 .title, .description {
@@ -45,10 +55,9 @@ const props = defineProps({
 }
 
 .video-player {
-  max-width: 800px;
+  max-width: 300px;
   width: 100%;
-  align-self: center;
+  min-width: 300px;
 }
 
 </style>
-

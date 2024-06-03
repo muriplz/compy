@@ -8,7 +8,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
     <DarkModeSwitch/>
     <div class="spacer1"></div>
 
-    <h1 class="title">Cholas</h1>
+    <h1 class="title">Sancho Vegard</h1>
 
     <div class="spacer2"></div>
   </div>
@@ -27,7 +27,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 }
 
 .spacer1 {
-  flex-grow: 0.75; /* The first spacer will grow to take up space */
+  flex-grow: 0.85; /* The first spacer will grow to take up space */
 }
 
 .spacer2 {
