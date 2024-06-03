@@ -7,13 +7,22 @@ import Separator from "@/components/Separator.vue";
 const props = defineProps({
   title: String,
   src: String,
-  description: String
+  description: String,
+  containsSlurs: {
+    type: Boolean,
+    default: false
+  },
+  id: {
+    type: String,
+    default: ''
+  },
 });
 </script>
 
 <template>
-  <div class="video-entry">
+  <div :id="props.id" class="video-entry">
     <h2 class="title">{{ props.title }}</h2>
+    <p v-if="props.containsSlurs" class="warning">"Explicit language in this video"</p>
     <VideoPlayer class="video-player" :src="props.src" />
     <p class="description">{{ props.description }}</p>
   </div>
@@ -37,10 +46,9 @@ const props = defineProps({
   font-size: 22px;
   margin: 10px 0 20px;
   text-align: justify;
-
 }
 
-.title, .description {
+.title, .description, .warning {
   align-self: flex-start;
 }
 

@@ -8,7 +8,7 @@
     <div class="content">
       <p>
         If you have any questions or would like to get in touch, feel free to send me an email at
-        <a href="mailto:sanchosteffensen@gmail.com">my Email</a>
+        sanchosteffensen@gmail.com
       </p>
     </div>
   </div>

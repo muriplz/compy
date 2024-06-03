@@ -13,11 +13,11 @@ const router = createRouter({
     scrollBehavior(to) {
         if (to.hash) {
             return {
-                el: to.hash,
-                behavior: 'smooth',
-            };
+                el: to.hash
+            }
+        } else {
+            return { top: 0 }
         }
-        return { top: 0 };
     },
 })
 

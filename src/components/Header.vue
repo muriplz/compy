@@ -27,7 +27,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 }
 
 .spacer1 {
-  flex-grow: 0.85;
+  flex-grow: 0.75;
 }
 
 .spacer2 {
@@ -35,7 +35,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 }
 
 .title {
-  font-size: 82px;
+  font-size: 7vw;
   text-align: center;
   user-select: none;
   font-family: 'Allerta Stencil', sans-serif;

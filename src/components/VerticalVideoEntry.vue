@@ -8,12 +8,16 @@ const props = defineProps({
   title: String,
   src: String,
   description: String,
-  index: Number
+  index: Number,
+  id: {
+    type: String,
+    default: ''
+  },
 });
 </script>
 
 <template>
-  <div class="video-entry" :class="{ 'reverse-layout': props.index % 2 === 0 }">
+  <div :id="props.id" class="video-entry" :class="{ 'reverse-layout': props.index % 2 === 0 }">
     <VideoPlayer class="video-player" :src="props.src" />
     <div class="text-content">
       <h2 class="title">{{ props.title }}</h2>
@@ -66,5 +70,20 @@ const props = defineProps({
   max-width: 250px;
   width: 100%;
   min-width: 250px;
+}
+
+@media(max-width: 800px) {
+  .video-entry {
+    flex-direction: column;
+  }
+
+  .video-entry.reverse-layout {
+    flex-direction: column;
+  }
+
+  .text-content {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 </style>
