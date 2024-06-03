@@ -4,14 +4,14 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 </script>
 
 <template>
-  <div class="header">
+  <header class="header">
     <DarkModeSwitch/>
     <div class="spacer1"></div>
 
     <h1 class="title">Sancho Vegard</h1>
 
     <div class="spacer2"></div>
-  </div>
+  </header>
 </template>
 
 

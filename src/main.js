@@ -4,6 +4,7 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import router from "@/components/router/index.js";
 import {Cafe32, CarbonIconsVue, Contrast32, Laptop32, Moon32, Sun32} from '@carbon/icons-vue';
+import {createMetaManager} from "vue-meta";
 
 createApp(App)
     .use(
@@ -19,4 +20,5 @@ createApp(App)
         }
     )
     .use(router)
+    .use(createMetaManager())
     .mount('#app');

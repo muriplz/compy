@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import HorizontalVideoEntry from "@/components/HorizontalVideoEntry.vue";
@@ -17,6 +18,19 @@ import Fados from "@/assets/media/Fados.mp4";
 import Albania from "@/assets/media/Albania.mp4";
 import Jollyweek2024 from "@/assets/media/Jollyweek2024.mp4";
 import Egersundsk8 from "@/assets/media/Egersundsk8.mp4";
+
+import {useMeta} from "vue-meta";
+
+useMeta({
+  title: 'Sancho Vegard - Portfolio',
+  meta: [
+    {
+      vmid: 'description',
+      name: 'description',
+      content: 'Welcome to the portfolio of Sancho Vegard. Explore creative projects, including short films, documentaries, and gaming content.'
+    }
+  ]
+})
 
 // Initialize video entries
 const horizontalVideoEntries = ref([
