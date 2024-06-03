@@ -27,11 +27,11 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 }
 
 .spacer1 {
-  flex-grow: 0.85; /* The first spacer will grow to take up space */
+  flex-grow: 0.85;
 }
 
 .spacer2 {
-  flex-grow: 1; /* The first spacer will grow to take up space */
+  flex-grow: 1;
 }
 
 .title {
@@ -39,9 +39,9 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
   text-align: center;
   user-select: none;
   font-family: 'Allerta Stencil', sans-serif;
-  flex-grow: 0; /* Prevents the title from growing */
-  flex-shrink: 0; /* Prevents the title from shrinking */
-  margin: 0; /* Ensures no extra space around the title */
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0;
 }
 </style>
 

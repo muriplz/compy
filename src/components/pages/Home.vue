@@ -93,6 +93,7 @@ const verticalVideoEntries = ref([
         :src="entry.src"
         :description="entry.description"
     />
+
   </div>
 
   <ContactMe/>
@@ -113,7 +114,7 @@ p {
 .video-entries-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* This centers children horizontally */
+  align-items: center;
   width: 100%;
 }
 </style>

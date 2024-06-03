@@ -10,9 +10,9 @@ export default {
 
 <style scoped>
 .separator {
-  height: 2px; /* Sets the height of the separator line */
-  width: 80%; /* Sets the width to 40% of the parent container */
-  background-color: var(--color-background-mute); /* Uses CSS variable for color */
-  margin: 20px auto; /* Centers the separator horizontally and adds vertical spacing */
+  height: 2px;
+  width: 80%;
+  background-color: var(--color-background-mute);
+  margin: 20px auto;
 }
 </style>

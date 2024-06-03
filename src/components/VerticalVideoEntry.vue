@@ -7,12 +7,13 @@ import Separator from "@/components/Separator.vue";
 const props = defineProps({
   title: String,
   src: String,
-  description: String
+  description: String,
+  index: Number
 });
 </script>
 
 <template>
-  <div class="video-entry">
+  <div class="video-entry" :class="{ 'reverse-layout': props.index % 2 === 0 }">
     <VideoPlayer class="video-player" :src="props.src" />
     <div class="text-content">
       <h2 class="title">{{ props.title }}</h2>
@@ -21,6 +22,8 @@ const props = defineProps({
   </div>
   <Separator/>
 </template>
+
+
 
 <style scoped>
 @import url(https://fonts.bunny.net/css?family=alumni-sans-inline-one:400);
@@ -35,8 +38,13 @@ const props = defineProps({
   margin: 20px auto auto;
 }
 
+.video-entry.reverse-layout {
+  flex-direction: row-reverse;
+}
+
 .text-content {
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .title {
@@ -55,9 +63,8 @@ const props = defineProps({
 }
 
 .video-player {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%;
-  min-width: 300px;
+  min-width: 250px;
 }
-
 </style>
