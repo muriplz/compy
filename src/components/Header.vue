@@ -16,6 +16,8 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 
 
 <style scoped>
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
+
 .header {
   display: flex;
   align-items: center;
@@ -35,6 +37,7 @@ import DarkModeSwitch from "@/components/DarkModeSwitch.vue";
 .title {
   font-size: 7vw;
   text-align: center;
+  font-family: 'Abril Fatface', display, serif;
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;

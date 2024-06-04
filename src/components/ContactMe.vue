@@ -7,8 +7,7 @@
     <h2 class="title">Contact Me</h2>
     <div class="content">
       <p>
-        If you have any questions or would like to get in touch, feel free to send me an email at
-        sanchosteffensen@gmail.com
+        If you have any questions or would like to get in touch, feel free to send me an email at sanchosteffensen@gmail.com
       </p>
     </div>
   </div>
@@ -32,6 +31,7 @@
 
 p {
   padding: 10px;
+  justify-content: center;
 }
 
 .content {
