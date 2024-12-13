@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import {defineProps} from 'vue';
 import VideoPlayer from "@/components/VideoPlayer.vue";
 import Separator from "@/components/Separator.vue";
 
@@ -22,7 +22,11 @@ const props = defineProps({
 <template>
   <div :id="props.id" class="video-entry">
     <h2 class="title">{{ props.title }}</h2>
-    <p v-if="props.containsSlurs" class="warning">"Explicit language in this video"</p>
+    <div v-if="props.containsSlurs" class="warning">
+      <Warning style="color: #750c0c; margin-bottom: 4px; margin-right: 8px"/>
+      <p>"Explicit language in this video"</p>
+
+    </div>
     <VideoPlayer class="video-player" :src="props.src" />
     <p class="description">{{ props.description }}</p>
   </div>
@@ -56,6 +60,11 @@ const props = defineProps({
   max-width: 800px;
   width: 100%;
   align-self: center;
+}
+
+.warning {
+  display: flex;
+  align-items: center;
 }
 
 @media(max-width: 800px) {

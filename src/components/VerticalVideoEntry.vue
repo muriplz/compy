@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import {defineProps} from 'vue';
 import VideoPlayer from "@/components/VideoPlayer.vue";
 import Separator from "@/components/Separator.vue";
 

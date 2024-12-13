@@ -2,7 +2,6 @@
 import {ref} from "vue";
 
 import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 import HorizontalVideoEntry from "@/components/HorizontalVideoEntry.vue";
 import VerticalVideoEntry from "@/components/VerticalVideoEntry.vue";
 import ContactMe from "@/components/ContactMe.vue";
@@ -18,8 +17,12 @@ import Fados from "@/assets/media/Fados.mp4";
 import Albania from "@/assets/media/Albania.mp4";
 import Jollyweek2024 from "@/assets/media/Jollyweek2024.mp4";
 import Egersundsk8 from "@/assets/media/Egersundsk8.mp4";
+import Asmt241 from "@/assets/media/Asmt241.mp4";
+import tresDhexOG1 from "@/assets/media/3DhexOG1.mp4";
+
 
 import {useMeta} from "vue-meta";
+import RevyvalSection from "@/components/RevyvalSection.vue";
 
 useMeta({
   title: 'Sancho Vegard - Portfolio',
@@ -34,6 +37,12 @@ useMeta({
 
 // Initialize video entries
 const horizontalVideoEntries = ref([
+  {
+    title: 'Compilation of Footage Edited for Urban Exploring',
+    src: Redstartrain,
+    description: 'This is a compilation of shots from an urban exploring adventure at the Red Star Train Graveyard in Budapest, Hungary. Editing the end of this 4-minute video was the most enjoyable part of the project.',
+    id: 4,
+  },
   {
     title: 'Low Budget Short Movie Footage Compilation',
     src: Trailer1,
@@ -54,12 +63,7 @@ const horizontalVideoEntries = ref([
     description: 'This clip is from the song and music video we produced on the fifth day of shooting for the documentary mentioned above.',
     id: 3,
   },
-  {
-    title: 'Compilation of Footage Edited for Urban Exploring',
-    src: Redstartrain,
-    description: 'This is a compilation of shots from an urban exploring adventure at the Red Star Train Graveyard in Budapest, Hungary. Editing the end of this 4-minute video was the most enjoyable part of the project.',
-    id: 4,
-  },
+
   {
     title: 'Favorite Edits for Gaming YouTubers/Streamers',
     src: Gamincomp,
@@ -79,9 +83,27 @@ const horizontalVideoEntries = ref([
 const verticalVideoEntries = ref([
   {
     title: 'Short “Social Media” Videos from Various Events',
-    src: Fados,
+    src: Asmt241,
     description: 'This section features short videos, typically no longer than a minute, from various trips and events. I am comfortable with this format and am continually improving. Here are some examples of aftermovies I’ve created for social media:',
     id: 7,
+  },
+  {
+    title: 'Making of Compilation:',
+    src: tresDhexOG1,
+    description: 'This video showcases the creation of a 3D-printed Hextech Chest prop from Arcane/League of Legends. With dynamic, rhythmic editing and detailed close-up shots, it highlights the intricate crafting process. The transitions and animations, especially those mimicking Jinx\'s flashbacks, add intensity and flair. Filming and editing this project was a rewarding experience, celebrating artistry and 3d precision.',
+    id: 8,
+  },
+  {
+    title: 'Faro, Portugal',
+    src: Fados,
+    description: 'Faro offered the perfect opportunity to experiment with my newly acquired 50mm lens, resulting in a soothing and beautifully captured vacation. For the editing, I tried a vintage-inspired style, lending the video a nostalgic and precious quality. It remains a personal favorite, both for its visuals and the memories it preserves.',
+    id: 8,
+  },
+  {
+    title: 'Skating Event in Norway',
+    src: Egersundsk8,
+    description: 'Egersund Skateclub, from a small town in Norway gathered around to have a fun session at the closest indoor-skatepark, 4 hours away through overwhelmingly big amounts of snow and a little bit of ice-drifting (professional driver behind the wheel, do not attempt)',
+    id: 10,
   },
   {
     title: 'Albania',
@@ -95,12 +117,7 @@ const verticalVideoEntries = ref([
     description: 'A rather more relaxing energy to this one, exploring around Hertogenbosch with easy going visuals, soothing activities and music.',
     id: 9,
   },
-  {
-    title: 'Skating Event in Norway',
-    src: Egersundsk8,
-    description: 'Egersund Skateclub, from a small town in Norway gathered around to have a fun session at the closest indoor-skatepark, 4 hours away through overwhelmingly big amounts of snow and a little bit of ice-drifting (professional driver behind the wheel, do not attempt)',
-    id: 10,
-  },
+
 ]);
 </script>
 
@@ -115,15 +132,6 @@ const verticalVideoEntries = ref([
   </p>
 
   <div class="video-entries-container">
-    <HorizontalVideoEntry
-        :id="entry.id"
-        v-for="(entry, index) in horizontalVideoEntries"
-        :key="index"
-        :title="entry.title"
-        :src="entry.src"
-        :description="entry.description"
-        :containsSlurs="entry.containsSlurs"
-    />
     <VerticalVideoEntry
         :id="entry.id"
         v-for="(entry, index) in verticalVideoEntries"
@@ -133,6 +141,19 @@ const verticalVideoEntries = ref([
         :src="entry.src"
         :description="entry.description"
     />
+
+    <RevyvalSection/>
+
+    <HorizontalVideoEntry
+        :id="entry.id"
+        v-for="(entry, index) in horizontalVideoEntries"
+        :key="index"
+        :title="entry.title"
+        :src="entry.src"
+        :description="entry.description"
+        :containsSlurs="entry.containsSlurs"
+    />
+
 
   </div>
 
