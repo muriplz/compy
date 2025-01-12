@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from "@/components/router/index.js";
 import {Cafe32, CarbonIconsVue, Contrast32, Laptop32, Moon32, Sun32, WarningAltFilled16} from '@carbon/icons-vue';
 import {createMetaManager} from "vue-meta";
+import {LogoGithub32} from "@carbon/icons";
 
 createApp(App)
     .use(
@@ -16,7 +17,8 @@ createApp(App)
                 Cafe: Cafe32,
                 Contrast: Contrast32,
                 Laptop: Laptop32,
-                Warning: WarningAltFilled16
+                Warning: WarningAltFilled16,
+                GithubLogo: LogoGithub32,
             }
         }
     )

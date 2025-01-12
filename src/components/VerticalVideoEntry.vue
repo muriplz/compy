@@ -1,5 +1,5 @@
 <script setup>
-import {defineProps} from 'vue';
+import { defineProps } from 'vue';
 import VideoPlayer from "@/components/VideoPlayer.vue";
 import Separator from "@/components/Separator.vue";
 
@@ -13,21 +13,27 @@ const props = defineProps({
     type: String,
     default: ''
   },
+  totalEntries: Number,
+  date: {
+    type: String,
+    default: ''
+  },
 });
 </script>
 
 <template>
   <div :id="props.id" class="video-entry" :class="{ 'reverse-layout': props.index % 2 === 0 }">
-    <VideoPlayer class="video-player" :src="props.src" />
+    <div>
+      <p style="text-align: right">{{ props.date }}</p>
+      <VideoPlayer class="video-player" :src="props.src" />
+    </div>
     <div class="text-content">
       <h2 class="title">{{ props.title }}</h2>
       <p class="description">{{ props.description }}</p>
     </div>
   </div>
-  <Separator/>
+  <Separator v-if="props.index === 0 || props.index === 3" />
 </template>
-
-
 
 <style scoped>
 @import url(https://fonts.bunny.net/css?family=abril-fatface:400);

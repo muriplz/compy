@@ -4,24 +4,28 @@
     <div class="media">
       <VideoPlayer class="video-player" :src="Utrechtdef241" />
       <img src="@/assets/media/pictu.webp" alt="">
-      <VideoPlayer class="video-player" :src="Revyvalshootingdef1" />
+      <div class="stacked-media video-player">
+        <p>08.2024</p>
+        <VideoPlayer :src="Revyvalshootingdef1" />
+      </div>
     </div>
-    <p class="description">Revyval.Wear is a creative initiative that transforms used clothing into unique pieces using embroidery, paintwork, and custom designs. This project combines a variety of skills, fostering personal and professional growth in areas such as:</p>
+    <p class="description">Revyval is a creative initiative that transforms used
+      clothing into unique pieces using embroidery, paintwork,
+      and custom designs. This project combines a variety of
+      skills, and has had me fostering personal and
+      professional growth in areas such as:</p>
     <ul class="description star-list">
-      <li><strong style="font-weight: bold">Design & Sample Making:</strong> Conceptualizing ideas and bringing them to life.</li>
-      <li><strong style="font-weight: bold">Editing & Brand Identity:</strong> Crafting a distinctive visual style for Revyval.</li>
-      <li><strong style="font-weight: bold">Communication & Community Building:</strong> Connecting with like-minded individuals and growing a supportive audience.</li>
-      <li><strong style="font-weight: bold">Photography & Videography:</strong> Capturing the essence of each piece through visuals.</li>
-      <li><strong style="font-weight: bold">Sales, Pricing & Business Skills:</strong> Navigating the entrepreneurial side of the project.</li>
-      <li><strong style="font-weight: bold">Programming & Web Development:</strong> Together along with my web admin, fully coded the Revyval website from scratch.</li>
+      <li><strong style="font-weight: bold">Design & Sample Making</strong></li>
+      <li><strong style="font-weight: bold">Editing & Brand Identity</strong></li>
+      <li><strong style="font-weight: bold">Communication & Community Building</strong></li>
+      <li><strong style="font-weight: bold">Photography & Videography</strong></li>
+      <li><strong style="font-weight: bold">Sales, Pricing & Business Skills</strong></li>
+      <li><strong style="font-weight: bold">Programming & Web Development</strong></li>
     </ul>
-    <p class="description">I thrive on keeping my hands busy and improving with every step of the process. There’s a steady momentum of progress, with each day building on the lessons of the last.</p>
-
-    <p class="description">Feel free to explore the project in more detail:
-      <a href="https://revyval.store">
-        revyval.store
-      </a>
-    </p>
+    <p class="description">I thrive on keeping my hands busy and improving with
+      every step of the process. Each day builds on the
+      lessons of the previous one, creating a steady
+      momentum of growth and progress.</p>
   </div>
   <Separator/>
 </template>
@@ -46,7 +50,7 @@
   text-align: justify;
 }
 
-.title, .description, .warning {
+.title, .description {
   align-self: flex-start;
 }
 
@@ -54,12 +58,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .video-player, .media img {
-  max-width: 32%;
+  max-width: 30%;
+  min-width: 30%;
   width: 100%;
-  align-self: center;
+}
+
+.stacked-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30%;
+  width: 100%;
+}
+
+.stacked-media p {
+  text-align: right;
+  width: 100%;
 }
 
 .star-list {
@@ -94,17 +112,16 @@
     flex-direction: column;
   }
 
-  .video-player, .media img {
+  .video-player, .media img, .stacked-media {
     max-width: 100%;
     margin-bottom: 10px;
   }
 }
-
 </style>
 
 <script setup>
-import Utrechtdef241 from "@/assets/media/Utrechtdef241.mp4";
-import Revyvalshootingdef1 from "@/assets/media/Revyvalshootingdef1.mp4";
+import Utrechtdef241 from "@/assets/media/rev1.mp4";
+import Revyvalshootingdef1 from "@/assets/media/rev2.mp4";
 
 import Separator from "@/components/Separator.vue";
 import VideoPlayer from "@/components/VideoPlayer.vue";
